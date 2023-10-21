@@ -1,2 +1,11 @@
 # otus-spring
-Spring course in Otus
+Домашние задания в рамках курса "Разработчик на Spring Framework"
+
+Слушаетель - Шевкунов Вячеслав Сергеевич 
+
+Период обучения
+28 сентября — 3 апреля 2024 года
+
+Страница курса - https://otus.ru/lessons/javaspring/
+
+[Домашняя работа №1 к занятию "Введение в Spring Framework"](google.com)
