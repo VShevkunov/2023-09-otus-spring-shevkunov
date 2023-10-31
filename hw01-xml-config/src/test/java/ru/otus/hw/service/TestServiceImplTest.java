@@ -7,46 +7,32 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import ru.otus.hw.dao.CsvQuestionDao;
+import ru.otus.hw.dao.QuestionDao;
 
 @ExtendWith(MockitoExtension.class)
 class TestServiceImplTest {
+
     @Mock
     private IOService ioService;
+
     @Mock
-    private CsvQuestionDao csvQuestionDao;
-    private TestService testServiceImpl;
+    private QuestionDao questionDao;
+
+    private TestService testService;
 
     @BeforeEach
     void setUp() {
 
-        testServiceImpl = new TestServiceImpl(ioService, csvQuestionDao);
-    }
+       testService = new TestServiceImpl(ioService, questionDao);
 
-    @Test
-    @DisplayName("Бин создался")
-    void getCsvTest() {
-
-        Assertions.assertNotNull(testServiceImpl);
     }
 
     @Test
     @DisplayName("Запуск фактически не падает")
     void testExecuteTest() {
 
-        Throwable exception = null;
+        testService.executeTest();
+        Assertions.assertTrue(true);
 
-        try{
-            testServiceImpl.executeTest();
-        }catch (Exception e){
-            exception = e;
-        }
-
-        Assertions.assertNull(exception);
     }
-
-
-
-
-
 }
