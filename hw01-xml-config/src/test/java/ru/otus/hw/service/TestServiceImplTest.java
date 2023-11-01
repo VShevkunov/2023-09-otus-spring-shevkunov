@@ -31,8 +31,7 @@ class TestServiceImplTest {
     @DisplayName("Запуск фактически не падает")
     void testExecuteTest() {
 
-        testService.executeTest();
-        Assertions.assertTrue(true);
+        Assertions.assertDoesNotThrow(() -> testService.executeTest());
 
     }
 }
